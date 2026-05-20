@@ -2,12 +2,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Georgia', serif;
-    background-image: url('https://images.unsplash.com/photo-1523294587484-bae6cc870010?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJyZWFkfGVufDB8fDB8fHww'); /* Add your background image */
-    background-size: cover; 
-    background-attachment: fixed; 
+    background-image: url('https://images.unsplash.com/photo-1523294587484-bae6cc870010?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJyZWFkfGVufDB8fDB8fHww');
+    background-size: cover;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
 body::before {
     content: '';
     position: fixed;
@@ -17,10 +18,12 @@ body::before {
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
     z-index: -1;
-  }
+}
+
+/* NAVIGATION */
 
 nav {
-    position: sticky; 
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -28,117 +31,116 @@ nav {
 
 .navbar {
     display: flex;
-    justify-content: flex-end; /* Align the items to the right */
+    justify-content: flex-end;
     list-style: none;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 15px;
 }
 
 .navbar a {
-    text-decoration: none; 
-    color: #f7e9d7; 
+    text-decoration: none;
+    color: #f7e9d7;
     font-size: 20px;
     font-weight: 100;
-    padding: 8px 15px; 
+    padding: 8px 15px;
     margin-right: 80px;
-    transition: background-color 0.2s ease, color 0.2s ease, border-radius 0.2s ease;
+    transition: background-color 0.2s ease,
+                color 0.2s ease,
+                border-radius 0.2s ease;
     text-align: center;
-  }
+}
 
 .navbar a:hover {
-    background-color: #463123; 
+    background-color: #463123;
     border-radius: 20px;
-    padding: 10px 18px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
-  }
+    padding: 10px 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
 
-  .menu-icons {
+.menu-icons {
     display: flex;
     align-items: center;
-    color: #f7e9d7; 
-  }
+    color: #f7e9d7;
+}
+
 .menu-icons i {
-    font-size: 1.6rem; 
-    margin-right: 8px; 
-    color: #caaa94; 
+    font-size: 1.6rem;
+    margin-right: 8px;
+    color: #caaa94;
     transition: color 0.3s ease;
-    
 }
 
 .menu-icons i:hover {
-    color: #d7c4b3; 
+    color: #d7c4b3;
 }
 
-
 .navbar span {
-    display: inline-flex; /* Use flex for better alignment */
+    display: inline-flex;
     width: 30px;
     height: 30px;
-    background-color: #4d3626; 
+    background-color: #4d3626;
     color: white;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    border-radius: 50%; 
-    margin-right: 40px; 
-    font-size: 14px; 
-    font-weight: bold; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-    position: relative; 
+    border-radius: 50%;
+    margin-right: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
     top: 10px;
     right: 17px;
 }
 
-.cartTab{
+/* CART */
+
+.cartTab {
     width: 400px;
     background-color: #463123;
     color: #d7c4b3;
     position: fixed;
-   inset: 120px -400px 0 auto;
-   display: grid;
-   grid-template-rows: 70px 1fr 70px;
-   border-radius: 4px;
-   transition: .5s;
-
+    inset: 120px -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    border-radius: 4px;
+    transition: .5s;
 }
 
-body.showCart .cartTab{
+body.showCart .cartTab {
     inset: 120px 0 0 auto;
-
 }
 
-body.showCart .container{
+body.showCart .container {
     transform: translateX(-250px);
 }
-.cartTab h1{
+
+.cartTab h1 {
     padding: 20px;
     margin: 0;
     font-weight: 300;
 }
 
-.cartTab .btn{
+.cartTab .btn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-.cartTab .btn button{
+.cartTab .btn button {
     background-color: #d7c4b3;
     border: none;
     font-weight: 500;
     cursor: pointer;
-
 }
 
-.cartTab .btn .close{
+.cartTab .btn .close {
     background-color: #fff;
 }
 
-
-.cartTab .listCart .item img{
+.cartTab .listCart .item img {
     width: 100%;
 }
 
-
-.cartTab .listCart .item{
+.cartTab .listCart .item {
     display: grid;
     grid-template-columns: 70px 150px 50px 1fr;
     margin-left: 10px;
@@ -151,7 +153,6 @@ body.showCart .container{
     margin-right: 5px;
 }
 
-/* Add this CSS to style the Total Balance section */
 .cartTab .totalBalance {
     margin-top: 20px;
     font-size: 18px;
@@ -161,9 +162,8 @@ body.showCart .container{
     border-top: 1px solid #ddd;
 }
 
-/* Optional: Style the total balance text */
 .cartTab .totalBalance span {
-    color: #be9f7b; /* Change to a green color or any color that fits the design */
+    color: #be9f7b;
 }
 
 .listCart .quantity {
@@ -195,82 +195,97 @@ body.showCart .container{
     font-weight: bold;
 }
 
-
-.listCart.item:nth-child(even){
+.listCart.item:nth-child(even) {
     background-color: #f7e9d7;
 }
-.listCart{
+
+.listCart {
     overflow: auto;
 }
 
-.listCart ::-webkit-scrollbar{
-width: 0;
-
+.listCart::-webkit-scrollbar {
+    width: 0;
 }
 
+/* TITLE */
+
 .coffeeprod {
-    text-align: center; 
+    text-align: center;
 }
 
 .coffeeprod h1 {
-    font-family: 'Arial', serif; 
-    font-size: 2.5em; 
-    font-weight: 700; 
-    color: #d7c4b3; 
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Added text shadow */
-
-}
-.listProduct .item img{
-    width: 75%;    
-    margin-left: 30px;
-    margin-top: 20px;
-    border-radius: 20px;
-    object-fit: cover;
+    font-family: 'Arial', serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #d7c4b3;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-.listProduct{
+/* PRODUCT GRID */
+
+.listProduct {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     opacity: 90%;
-
+    padding: 20px;
 }
 
-.listProduct .item{
+/* PRODUCT CARD */
+
+.listProduct .item {
     background-color: #745e46;
     width: 250px;
-    height: 350px;
+    height: 360px;
     border-radius: 20px;
     margin-left: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); 
-    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.listProduct .item h2{
+.listProduct .item:hover {
+    transform: translateY(-5px);
+}
+
+/* IMAGE FIX */
+
+.listProduct .item img {
+    width: 80%;
+    height: 160px;
+    margin: 20px auto 0 auto;
+    display: block;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* PRODUCT TEXT */
+
+.listProduct .item h2 {
     font-weight: bolder;
     color: #f7e9d7;
     margin-left: 30px;
     font-size: 25px;
+    margin-top: 20px;
 }
 
-.listProduct .item .price{
-    margin-top: -15px;
+.listProduct .item .price {
+    margin-top: -10px;
     margin-bottom: 10px;
     font-size: 14px;
     margin-left: 30px;
     color: #4d3626;
     background-color: #d7c4b3;
     padding: 12px;
-    width: 35px;
+    width: fit-content;
     border-radius: 14px;
     font-weight: bolder;
     letter-spacing: 2px;
-
 }
 
-.listProduct .item button{
+.listProduct .item button {
     background-color: #463123;
     color: #d7c4b3;
     padding: 10px 15px;
@@ -279,9 +294,15 @@ width: 0;
     border: none;
     margin-left: 20px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); 
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    transition: 0.3s ease;
 }
+
+.listProduct .item button:hover {
+    background-color: #5a3f2c;
+}
+
+/* MODAL */
 
 .modal {
     display: none;
@@ -324,7 +345,7 @@ width: 0;
 }
 
 #checkoutForm input,
-#checkoutForm textarea{
+#checkoutForm textarea {
     width: 95%;
     padding: 10px;
     border-radius: 5px;
@@ -360,6 +381,8 @@ width: 0;
     background: #4caf50;
     color: white;
 }
+
+/* FORM */
 
 form {
     font-family: Arial, sans-serif;
@@ -399,13 +422,10 @@ select:focus {
     outline: none;
     border-color: #4CAF50;
     background-color: #e0f7e0;
+    box-shadow: 0 0 5px rgba(0, 200, 0, 0.5);
 }
 
 option {
     padding: 10px;
     font-size: 16px;
-}
-
-select:focus {
-    box-shadow: 0 0 5px rgba(0, 200, 0, 0.5);
 }
