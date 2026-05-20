@@ -9,7 +9,7 @@
         "id": 2,
         "name": "Brioche",
         "price": 150,
-        "image": "https://breakfast-world.com/wp-content/uploads/2021/06/Brioche-col-Tuppo-scaled.jpg"
+        "image": "Brioche.jpg"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "id": 4,
         "name": "Focaccia",
         "price": 280,
-        "image": "https://www.177milkstreet.com/assets/site/Recipes/_large/Tomato-Olive-Focaccia.jpg"
+        "image": "focaccia.jpg"
     },
     {
         "id": 5,
@@ -45,7 +45,7 @@
         "id": 8,
         "name": "Croissant",
         "price": 160,
-        "image": "https://delicedange.md/wp-content/uploads/2022/03/croasant-multicolore-scaled.jpg"
+        "image": "croissant.jpg"
     },
     {
         "id": 9,
